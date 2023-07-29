@@ -1,0 +1,29 @@
+/* 1- Import Root */
+@import url('./../css/ComponentPages/roots.css');
+/* 2- Import Navbar Section */
+@import url('./../css/ComponentPages/HeaderAndFooter/navbar.css');
+/* 3- Import Footer Section */
+@import url('./../css/ComponentPages/HeaderAndFooter/footer.css');
+
+
+#productTaxes{
+    height: 100%;
+    border: 1px solid red;
+    padding: 0 1em;
+}
+#productTaxes::before{
+    content: "Taxes:";
+}
+
+#productTotal{
+    height: 100%;
+    border: 1px solid red;
+    padding: 0 1em;
+}
+#productTotal::before{
+    content: "Total :";
+}
+/* table{
+    max-height: 5px;
+    overflow-y: scroll;
+} */

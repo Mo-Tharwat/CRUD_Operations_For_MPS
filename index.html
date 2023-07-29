@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- libraries -->
+        <link rel="stylesheet" href="./assets/css/libraries.css">
+        <!-- Index Style Sheet -->
+        <link rel="stylesheet" href="./assets/css/index_style.css">
+        <title>Web Template</title>
+    </head>
+    <body>
+
+        <div class="crudsSystem w-75 m-auto my-5">
+            <div class="head text-center text-uppercase p-3">
+                <h1 class="display-2 fw-bolder">cruds system</h1>
+                <p class="fw-bold">product management system</p>
+            </div>
+            <div class="inputData d-flex flex-wrap justify-content-center gap-1">
+
+                <input type="text" class="w-100 " placeholder="Product Name" id="productName">
+                <div class="calcPrice d-flex gap-2 m-2 w-100">
+                    <input type="number" onkeyup="getTotal()" onclick="getTotal()"  min="1" class="form-control" placeholder="Price EGP" id="productPrice">
+                    <input type="number" onkeyup="getTotal()" onclick="getTotal()"  min="0" class="form-control" placeholder="ADS EGP" id="productADS">
+                    <input type="number" onkeyup="getTotal()" onclick="getTotal()"  max="100" min="0" class="form-control" placeholder="Discount EGP" id="productDiscount">
+                    <span class="text-start rounded-2 form-control" id="productTaxes"></span>
+                    <span class="text-start rounded-2 form-control" id="productTotal"></span>
+                    <!-- <input type="text" class="w-25" value="" placeholder="Taxes EGP" id="productTaxes" disabled> -->
+                    <!-- <input type="text" class="w-25" placeholder="Total EGP" id="productTotal" disabled> -->
+                </div>
+
+                <div class="otherOption d-flex align-items-center justify-content-between w-100 gap-1">
+                    <input type="number" min="0" class="w-25 form-control" placeholder="Stock" id="productStock">
+                    <input type="number" min="1" class="w-25 form-control" placeholder="Counts" id="productCounts">
+                    <input type="text" class="w-25 form-control" placeholder="Category" id="productCategory">
+                </div>
+                <button type="submit" id="submit" class="btn btn-dark m-2 w-100">Create</button>
+    
+            </div>
+            <input type="text" placeholder="Search" class="w-100 my-3 form-control">
+            <div class="searchItems m-1 p-1">
+                
+                <div class="btnSearch d-flex justify-content-between align-items-center my-2 gap-1">
+                    <button id="searchName" class="btn btn-info w-25">Search by Product Name</button>
+                    <button id="searchCategory" class="btn btn-info w-25">Search by Product Category</button>                    
+                </div>
+            </div>
+            <table class="table text-center table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>ADS</th>
+                        <th>Discount</th>
+                        <th>Taxes</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>
+                            Update
+                        </th>
+                        <th>
+                            Delete
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- bootstrap (Javascript & Popper) -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>    
+        <!-- Main J.S -->
+        <script src="./assets/js/main.js"></script>    
+ 
+    </body>
+</html>
